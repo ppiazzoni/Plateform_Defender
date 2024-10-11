@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.SceneManagement;
 
 public class CharaController : MonoBehaviour
 {
@@ -242,6 +243,7 @@ public class CharaController : MonoBehaviour
         if (m_isAlive)
         {
             m_isAlive = false;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().PlatformDefender);
             CameraShake.Instance.StartShaking(2.5f, Vector2.up * 0.6f);
             CameraShake.Instance.FreezeTime(0.1f, 0.05f);
             if (m_deathVFX)
