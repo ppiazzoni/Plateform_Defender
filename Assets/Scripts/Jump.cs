@@ -75,9 +75,9 @@ public class Jump : MonoBehaviour
 
         if(m_spinVFX)
             m_spinVFX.Play();
-
+     
         yield return new WaitForSeconds(m_maxJumpDuration);
-
+ 
     }
 
 
