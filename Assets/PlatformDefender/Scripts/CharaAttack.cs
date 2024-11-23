@@ -11,6 +11,8 @@ public class CharaAttack : MonoBehaviour
     private Rigidbody2D m_rb;
     private bool m_canAttack = true;
     private bool m_isAttacking = false;
+    public Projectile_Behaviour ProjectilePrefab;
+    public Transform LaunchOffset;
 
     public bool IsAttacking { get => m_isAttacking; set => m_isAttacking = value; }
 
@@ -25,7 +27,7 @@ public class CharaAttack : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.F) ||Input.GetMouseButtonDown(0)) 
-        {
+        {                            
             TriggerAttack();
         }
     }
@@ -35,12 +37,13 @@ public class CharaAttack : MonoBehaviour
         if (!m_canAttack) return;
 
         if(m_swordTrail)
-            m_swordTrail.Clear(); // Pour reset le trail de l'arme, s'il y en a un
+            m_swordTrail.Clear(); 
 
         m_anim.SetTrigger("Attack");
         StartCoroutine(AttackCooldownCoroutine(m_attackCooldown));
 
-        m_rb.AddForce(Vector2.right * m_anim.transform.localScale.x * 5, ForceMode2D.Impulse); // Fait légèrement avancer le perso dans la direction de son attaque
+        m_rb.AddForce(Vector2.right * m_anim.transform.localScale.x * 5, ForceMode2D.Impulse);// Fait légèrement avancer le perso dans la direction de son attaque
+        Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
     }
 
     private IEnumerator AttackCooldownCoroutine(float cooldown)

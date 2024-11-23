@@ -342,6 +342,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &108148494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108148495}
+  m_Layer: 0
+  m_Name: Launch_Offset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &108148495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108148494}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.57, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1799976790}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &245448051
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +552,7 @@ GameObject:
   - component: {fileID: 357082863}
   m_Layer: 2
   m_Name: Platform (2)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -941,7 +972,7 @@ GameObject:
   - component: {fileID: 705099923}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1055,7 +1086,7 @@ GameObject:
   - component: {fileID: 897417039}
   m_Layer: 2
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1323,7 +1354,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 12.491646
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -1338,8 +1369,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 90
-  orthographic: 0
+  field of view: 87.7
+  orthographic: 1
   orthographic size: 16
   m_Depth: -1
   m_CullingMask:
@@ -1402,8 +1433,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c493d036c154443b2ebf5b068b2ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_damage: 25
-  m_knockbackForce: 26.35
+  m_damage: 100
+  m_knockbackForce: 25
   m_hitVFX: {fileID: 0}
 --- !u!70 &990905109
 CapsuleCollider2D:
@@ -2080,6 +2111,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5872314952401390682, guid: a9e2dfe56dc396b449eceaa731236400, type: 3}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2311,6 +2346,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_attackCooldown: 0.6
   m_swordTrail: {fileID: 425319078}
+  ProjectilePrefab: {fileID: 4906235122520829167, guid: 3518b4c9698cc3d488bea2c7928c2520, type: 3}
+  LaunchOffset: {fileID: 108148495}
 --- !u!114 &1799976788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2369,6 +2406,7 @@ Transform:
   - {fileID: 4704530794035056378}
   - {fileID: 1164086782}
   - {fileID: 846586803}
+  - {fileID: 108148495}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1812040982
@@ -2505,7 +2543,7 @@ GameObject:
   - component: {fileID: 1829586770}
   m_Layer: 2
   m_Name: Platform (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2667,7 +2705,7 @@ GameObject:
   - component: {fileID: 2050527132}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

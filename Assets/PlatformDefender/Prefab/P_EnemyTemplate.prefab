@@ -280,7 +280,7 @@ MonoBehaviour:
   m_health: 100
   m_weight: 0.7
   m_useHitBlink: 1
-  m_deathVFX: {fileID: 0}
+  m_deathVFX: {fileID: 611382043343796753, guid: ecd4e57e649898240a33029ec05e7981, type: 3}
 --- !u!50 &4243459724128554201
 Rigidbody2D:
   serializedVersion: 4
