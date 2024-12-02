@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 4223919968263628184}
   - component: {fileID: 7497916186502462412}
   - component: {fileID: 1004367984206261215}
-  - component: {fileID: 4906235122520829167}
   - component: {fileID: 358687681850583618}
   m_Layer: 0
-  m_Name: projectile
+  m_Name: Spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,19 +99,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
---- !u!114 &4906235122520829167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3482841084661992787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4f9f0b49800474480c3ce8508f14b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 14
 --- !u!96 &358687681850583618
 TrailRenderer:
   serializedVersion: 3
@@ -159,7 +145,7 @@ TrailRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Time: 0.38
-  m_PreviewTimeScale: 0
+  m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
