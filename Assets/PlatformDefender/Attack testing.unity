@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd6d4245a408ff48906fd66c778d43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 1715801052}
   mousePos: {x: 0, y: 0, z: 0}
   m_canThrow: 0
   m_timer: 0
