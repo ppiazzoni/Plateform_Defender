@@ -11,8 +11,7 @@ public class CharaAttack : MonoBehaviour
     private Rigidbody2D m_rb;
     private bool m_canAttack = true;
     private bool m_isAttacking = false;
-    public Projectile_Behaviour ProjectilePrefab;
-    public Transform LaunchOffset;
+
 
     public bool IsAttacking { get => m_isAttacking; set => m_isAttacking = value; }
 
@@ -43,7 +42,6 @@ public class CharaAttack : MonoBehaviour
         StartCoroutine(AttackCooldownCoroutine(m_attackCooldown));
 
         m_rb.AddForce(Vector2.right * m_anim.transform.localScale.x * 5, ForceMode2D.Impulse);// Fait légèrement avancer le perso dans la direction de son attaque
-        Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
     }
 
     private IEnumerator AttackCooldownCoroutine(float cooldown)
