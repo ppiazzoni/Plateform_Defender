@@ -284,6 +284,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 822706997686602350, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.7116992
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302123957481395510, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3564510393247931484, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.08020258
@@ -327,6 +335,26 @@ PrefabInstance:
     - target: {fileID: 4895852893988576633, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: m_Name
       value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208939285513366507, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297111070007173535, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: m_Name
+      value: swordTrail
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297111070007173535, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738242711665577500, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738242711665577500, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: m_Emitting
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -377,7 +405,7 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 0
-  m_AspectRatio: 2
+  m_AspectRatio: 5
   m_DataSource: 0
   m_TimeUpdateMode: 1
   m_PlaybackSpeed: 1
@@ -502,6 +530,10 @@ PrefabInstance:
     - target: {fileID: 329713394323156655, guid: 1cf7ea2a711c7074b95622f9aa32c88e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695450364123039869, guid: 1cf7ea2a711c7074b95622f9aa32c88e, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
       objectReference: {fileID: 0}
     - target: {fileID: 6943727090364832263, guid: 1cf7ea2a711c7074b95622f9aa32c88e, type: 3}
       propertyPath: m_charaController
@@ -680,6 +712,18 @@ PrefabInstance:
     - target: {fileID: 3044009469603192623, guid: c1429c737e72a174fadffec23cc20bb1, type: 3}
       propertyPath: m_VolumeFrameworkUpdateModeOption
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877057384342843744, guid: c1429c737e72a174fadffec23cc20bb1, type: 3}
+      propertyPath: m_drag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877057384342843744, guid: c1429c737e72a174fadffec23cc20bb1, type: 3}
+      propertyPath: m_spring
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877057384342843744, guid: c1429c737e72a174fadffec23cc20bb1, type: 3}
+      propertyPath: m_frequency
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8033337178720180136, guid: c1429c737e72a174fadffec23cc20bb1, type: 3}
       propertyPath: m_Name
