@@ -242,8 +242,7 @@ public class CharaController : MonoBehaviour
     {
         if (m_isAlive)
         {
-            m_isAlive = false;
-            ReloadScene();
+            m_isAlive = false;           
             CameraShake.Instance.StartShaking(2.5f, Vector2.up * 0.6f);
             CameraShake.Instance.FreezeTime(0.1f, 0.05f);
             if (m_deathVFX)
@@ -252,6 +251,7 @@ public class CharaController : MonoBehaviour
                 m_deathVFX.Play();
             }
             Destroy(gameObject);
+            ReloadScene();
         }
     }
 
@@ -262,8 +262,10 @@ public class CharaController : MonoBehaviour
         Gizmos.DrawLine(transform.position + m_detectionOffset, transform.position + m_detectionOffset + Vector3.down * m_groundLength);
     }
 
-    void ReloadScene()
-    {     
+    public IEnumerator ReloadScene()
+    {
+        yield return new WaitForSeconds(2);
+       
         Scene currentScene = SceneManager.GetActiveScene();       
         SceneManager.LoadScene(currentScene.name);
     }
