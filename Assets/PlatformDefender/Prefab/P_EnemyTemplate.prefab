@@ -299,7 +299,7 @@ Rigidbody2D:
   m_LinearDrag: 1
   m_AngularDrag: 1
   m_GravityScale: 3
-  m_Material: {fileID: 6200000, guid: 94ff1b3d6e59ca345ae6e1a641dfd387, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -322,8 +322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3c190a914389e45a4201a2512abb2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pHealth: {fileID: 5010561868520394267, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
-  m_damage: 50
+  pHealth: {fileID: 573044526496450286, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+  m_damage: 20
 --- !u!1 &7879281222923633739
 GameObject:
   m_ObjectHideFlags: 0

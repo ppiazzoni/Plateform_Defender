@@ -15,6 +15,7 @@ public class DamagePlayer : MonoBehaviour
             CharaController charaController = collision.GetComponentInParent<CharaController>();
             if (charaController)
             {
+                print("cum");
                 pHealth.m_health -= m_damage;                
             }
         }
