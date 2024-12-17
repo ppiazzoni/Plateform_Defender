@@ -10,12 +10,12 @@ public class DamageEnemy : MonoBehaviour
     [Header("VFX")]
     [SerializeField] private ParticleSystem m_hitVFX;
 
-    private CharaController m_charaController;
+    private CharaController m_CharaController;
 
 
     private void Awake()
     {
-        m_charaController = GetComponentInParent<CharaController>();
+        m_CharaController = GetComponentInParent<CharaController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,7 +29,7 @@ public class DamageEnemy : MonoBehaviour
             knockback *= m_knockbackForce;
 
             enemy.TakeDamage(m_damage, knockback);
-            //CameraShake.Instance.StartShaking(1, new Vector2(0,0), 0.06f, 0.05f);
+            CameraShake.Instance.StartShaking(1, new Vector2(0,0), 0.06f, 0.05f);
 
             if(m_hitVFX != null)
             {
@@ -39,7 +39,7 @@ public class DamageEnemy : MonoBehaviour
                 CameraShake.Instance.FreezeTime(0.07f, 0.1f);
             }
 
-            //m_charaController.FreezeAnim(0.15f);
+            m_CharaController.FreezeAnim(0.15f);
         }
     }
 }

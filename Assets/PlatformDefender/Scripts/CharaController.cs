@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class CharaController : MonoBehaviour
 {
     [Header("Movement")]
@@ -16,19 +16,22 @@ public class CharaController : MonoBehaviour
     [SerializeField] private Animator m_anim;
     [SerializeField] private ParticleSystem m_landVFX;
     [SerializeField] private ParticleSystem m_deathVFX;
+    [SerializeField] private Image m_healthBar;
+
 
     [Header("Ground Detection")]
     [SerializeField] [Tooltip("Length of the ground-checking collider")] private float m_groundLength = 0.3f;
     [SerializeField] [Tooltip("Distance between the ground-checking colliders")] private Vector3 m_detectionOffset = new Vector3(0, -0.9f, 0);
     [SerializeField] [Tooltip("Which layers are read as the ground")] private LayerMask m_groundLayer;
 
-    public float Health;
-    public float maxHealth;
-    
+    [Header("HealthValues")]
+    public float m_health;
+    public float m_maxHealth;
+    private bool m_isAlive = true;
+
     private bool m_canDetectGround = true;
     private bool m_isGrounded = true;
     private bool m_isFalling = false;
-    private bool m_isAlive = true;
 
     private Rigidbody2D m_rb;
     private Collider2D m_collider;
@@ -51,7 +54,7 @@ public class CharaController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = Health;
+        m_maxHealth = m_health;
         m_rb = GetComponent<Rigidbody2D>();
         m_collider = GetComponentInChildren<Collider2D>();
         m_jump = GetComponent<Jump>();
@@ -61,6 +64,8 @@ public class CharaController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_healthBar.fillAmount = Mathf.Clamp(m_health / m_maxHealth, 0, 1);
+
         m_rawInput.x = 0;
         m_rawInput.y = 0;
 
