@@ -22,6 +22,9 @@ public class CharaController : MonoBehaviour
     [SerializeField] [Tooltip("Distance between the ground-checking colliders")] private Vector3 m_detectionOffset = new Vector3(0, -0.9f, 0);
     [SerializeField] [Tooltip("Which layers are read as the ground")] private LayerMask m_groundLayer;
 
+    public float Health;
+    public float maxHealth;
+    
     private bool m_canDetectGround = true;
     private bool m_isGrounded = true;
     private bool m_isFalling = false;
@@ -48,6 +51,7 @@ public class CharaController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = Health;
         m_rb = GetComponent<Rigidbody2D>();
         m_collider = GetComponentInChildren<Collider2D>();
         m_jump = GetComponent<Jump>();
