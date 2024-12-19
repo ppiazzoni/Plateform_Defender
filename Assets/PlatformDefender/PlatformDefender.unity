@@ -699,8 +699,12 @@ PrefabInstance:
       objectReference: {fileID: 5010561867306235510}
     - target: {fileID: 6581846771186242392, guid: bcd20e753f4d1824fa33fd56712272c0, type: 3}
       propertyPath: m_damage
-      value: 120
+      value: 33
       objectReference: {fileID: 0}
+    - target: {fileID: 6581846771186242392, guid: bcd20e753f4d1824fa33fd56712272c0, type: 3}
+      propertyPath: targetScript
+      value: 
+      objectReference: {fileID: 5010561867306235510}
     - target: {fileID: 8745937881025956053, guid: bcd20e753f4d1824fa33fd56712272c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -976,7 +980,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 573044526496450286, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: m_health
-      value: 100
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 573044526496450286, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: m_landVFX
