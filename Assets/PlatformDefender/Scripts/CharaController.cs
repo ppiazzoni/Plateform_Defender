@@ -270,10 +270,8 @@ public class CharaController : MonoBehaviour
         Gizmos.DrawLine(transform.position + m_detectionOffset, transform.position + m_detectionOffset + Vector3.down * m_groundLength);
     }
 
-    public IEnumerator ReloadScene()
-    {
-        yield return new WaitForSeconds(0);
-       
+    public void ReloadScene()
+    {            
         Scene currentScene = SceneManager.GetActiveScene();       
         SceneManager.LoadScene(currentScene.name);
 
