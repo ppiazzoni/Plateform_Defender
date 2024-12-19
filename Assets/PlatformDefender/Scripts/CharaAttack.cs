@@ -25,7 +25,7 @@ public class CharaAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F)) //||Input.GetMouseButtonDown(0)) 
+        if(Input.GetKeyDown(KeyCode.F)||Input.GetMouseButtonDown(0)) 
         {                            
             TriggerAttack();
         }

@@ -272,7 +272,7 @@ public class CharaController : MonoBehaviour
 
     public IEnumerator ReloadScene()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0);
        
         Scene currentScene = SceneManager.GetActiveScene();       
         SceneManager.LoadScene(currentScene.name);
