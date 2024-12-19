@@ -17,9 +17,8 @@ public class CharaController : MonoBehaviour
     [SerializeField] private Animator m_anim;
     [SerializeField] private ParticleSystem m_landVFX;
     [SerializeField] private ParticleSystem m_deathVFX;
-    [SerializeField] private Image m_healthBar;
-
-
+    [SerializeField] private Image m_healthBar;   
+    
     [Header("Ground Detection")]
     [SerializeField] [Tooltip("Length of the ground-checking collider")] private float m_groundLength = 0.3f;
     [SerializeField] [Tooltip("Distance between the ground-checking colliders")] private Vector3 m_detectionOffset = new Vector3(0, -0.9f, 0);
@@ -258,8 +257,9 @@ public class CharaController : MonoBehaviour
             {
                 m_deathVFX.transform.parent = null;
                 m_deathVFX.Play();
-            }            
-            ReloadScene();
+            }                        
+            //AudioSource.SetActive(false);
+            
         }
     }
 
@@ -269,11 +269,5 @@ public class CharaController : MonoBehaviour
         if (m_isGrounded) { Gizmos.color = Color.green; } else { Gizmos.color = Color.red; }
         Gizmos.DrawLine(transform.position + m_detectionOffset, transform.position + m_detectionOffset + Vector3.down * m_groundLength);
     }
-
-    public void ReloadScene()
-    {            
-        Scene currentScene = SceneManager.GetActiveScene();       
-        SceneManager.LoadScene(currentScene.name);
-
-    }
+ 
 }
