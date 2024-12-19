@@ -240,7 +240,6 @@ GameObject:
   - component: {fileID: 4243459724128554200}
   - component: {fileID: 4243459724128554203}
   - component: {fileID: 4243459724128554201}
-  - component: {fileID: 8117715486726150847}
   - component: {fileID: 1092571988930232101}
   m_Layer: 0
   m_Name: P_EnemyTemplate
@@ -310,20 +309,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &8117715486726150847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4243459724128554202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a3c190a914389e45a4201a2512abb2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pHealth: {fileID: 573044526496450286, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
-  m_damage: 20
 --- !u!61 &1092571988930232101
 BoxCollider2D:
   m_ObjectHideFlags: 0

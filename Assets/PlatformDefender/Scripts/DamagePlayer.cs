@@ -14,9 +14,12 @@ public class DamagePlayer : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             CharaController player = other.gameObject.GetComponentInParent<CharaController>();
+            
             if (player != null)
             {
                 player.m_health -= m_damage;
+                Debug.LogError("oof");
+
                 if (player.m_health <= 0)
                 {
                     targetScript.OnDeath();
@@ -24,7 +27,7 @@ public class DamagePlayer : MonoBehaviour
             }
             else
             {
-                Debug.LogError("CharaController not found on Player object!");
+                Debug.LogError("CUM");
             }
         }
     }

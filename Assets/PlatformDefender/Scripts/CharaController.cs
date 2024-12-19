@@ -26,7 +26,7 @@ public class CharaController : MonoBehaviour
     [SerializeField] [Tooltip("Which layers are read as the ground")] private LayerMask m_groundLayer;
 
     [Header("HealthValues")]
-    public float m_health = 99f;
+    public float m_health;
     public float m_maxHealth;
     private bool m_isAlive = true;
 
@@ -54,19 +54,18 @@ public class CharaController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        m_maxHealth = m_health;
+    {         
+        m_health = m_maxHealth;
         m_rb = GetComponent<Rigidbody2D>();
         m_collider = GetComponentInChildren<Collider2D>();
         m_jump = GetComponent<Jump>();
-        m_charaAttack = GetComponent<CharaAttack>();
+        m_charaAttack = GetComponent<CharaAttack>();      
     }
 
     // Update is called once per frame
     void Update()
     {
         m_healthBar.fillAmount = Mathf.Clamp(m_health / m_maxHealth, 0, 1);
-
         m_rawInput.x = 0;
         m_rawInput.y = 0;
 
@@ -259,8 +258,7 @@ public class CharaController : MonoBehaviour
             {
                 m_deathVFX.transform.parent = null;
                 m_deathVFX.Play();
-            }
-            Destroy(gameObject);
+            }            
             ReloadScene();
         }
     }
@@ -278,5 +276,6 @@ public class CharaController : MonoBehaviour
        
         Scene currentScene = SceneManager.GetActiveScene();       
         SceneManager.LoadScene(currentScene.name);
+
     }
 }
