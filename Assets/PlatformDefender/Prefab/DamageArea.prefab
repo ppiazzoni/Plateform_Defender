@@ -228,6 +228,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3c190a914389e45a4201a2512abb2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pHealth: {fileID: 573044526496450286, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+  targetScript: {fileID: 573044526496450286, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+  m_burnKnockback: 80
+  m_damage: 33
 --- !u!61 &3261389675685954620
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -4,28 +4,29 @@ using UnityEngine;
 
 
 public class DamagePlayer : MonoBehaviour
-{
-    public CharaController pHealth;
+{   
     public CharaController targetScript;
     public float m_burnKnockback = 80;
     public float m_damage;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D (Collider2D other)
     {
-        if (collision.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            
-            CharaController charaController = collision.GetComponentInParent<CharaController>();
-            if (charaController)
-            {                
-                pHealth.m_health -= m_damage;
-                m_charaController.Rb.AddForce(m_burnKnockback * Vector2.up, ForceMode2D.Impulse);
+            CharaController player = other.gameObject.GetComponentInParent<CharaController>();
+            if (player != null)
+            {
+                player.m_health -= m_damage;
+                if (player.m_health <= 0)
+                {
+                    targetScript.OnDeath();
+                }
             }
-            
-            if (pHealth.m_health < 0)
-            {               
-                targetScript.OnDeath();
+            else
+            {
+                Debug.LogError("CharaController not found on Player object!");
             }
         }
     }
+
 }

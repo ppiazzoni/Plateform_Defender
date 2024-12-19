@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 public class CharaController : MonoBehaviour
 {
     [Header("Movement")]
@@ -25,7 +26,7 @@ public class CharaController : MonoBehaviour
     [SerializeField] [Tooltip("Which layers are read as the ground")] private LayerMask m_groundLayer;
 
     [Header("HealthValues")]
-    public float m_health;
+    public float m_health = 99f;
     public float m_maxHealth;
     private bool m_isAlive = true;
 
