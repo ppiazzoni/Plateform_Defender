@@ -321,6 +321,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8033337178720180136, guid: c1429c737e72a174fadffec23cc20bb1, type: 3}
   m_PrefabInstance: {fileID: 4604658495282723175}
   m_PrefabAsset: {fileID: 0}
+--- !u!223 &1499890436 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 6689012280134331673, guid: 5128d1171532b944ea122cdeba5a59fa, type: 3}
+  m_PrefabInstance: {fileID: 6242986860695891730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1815609014 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6943727090364832263, guid: 1cf7ea2a711c7074b95622f9aa32c88e, type: 3}
@@ -469,16 +474,24 @@ PrefabInstance:
       value: JumpVFX
       objectReference: {fileID: 0}
     - target: {fileID: 5825737931414724011, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825737931414724011, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.43
+      value: -0.392
       objectReference: {fileID: 0}
     - target: {fileID: 5825737931414724011, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6436215088780456436, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: m_Name
       value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: stopAction
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: lengthInSec
@@ -489,12 +502,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: ringBufferMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: simulationSpeed
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: useUnscaledTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: ShapeModule.length
       value: 7.320095
+      objectReference: {fileID: 0}
+    - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: InitialModule.size3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: InitialModule.rotation3D
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: EmissionModule.m_BurstCount
@@ -503,6 +540,10 @@ PrefabInstance:
     - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: TrailModule.lifetime.scalar
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: VelocityModule.orbitalZ.scalar
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -519,6 +560,10 @@ PrefabInstance:
     - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8000557995837172373, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: m_IsActive
@@ -1036,6 +1081,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.34749907
       objectReference: {fileID: 0}
+    - target: {fileID: 1959888302510016378, guid: 5128d1171532b944ea122cdeba5a59fa, type: 3}
+      propertyPath: BGCanvas
+      value: 
+      objectReference: {fileID: 1499890436}
     - target: {fileID: 3995285139431068215, guid: 5128d1171532b944ea122cdeba5a59fa, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0

@@ -4,10 +4,11 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     public GameObject gameOverUI;
+    public Canvas BGCanvas;
 
     void Start()
     {
-        
+        BGCanvas.worldCamera  = Camera.main;
     }
 
     // Update is called once per frame
