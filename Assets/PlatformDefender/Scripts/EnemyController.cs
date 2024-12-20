@@ -89,8 +89,8 @@ public class EnemyController : MonoBehaviour
 
         if (m_deathVFX != null)
         {
-            m_deathVFX.transform.parent = null;
-            m_deathVFX.transform.up = m_rb.velocity.normalized;
+            //m_deathVFX.transform.parent = null;
+            //m_deathVFX.transform.up = m_rb.velocity.normalized;
             m_deathVFX.Play();
         }
 

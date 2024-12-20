@@ -39,7 +39,7 @@ public class DamageEnemy : MonoBehaviour
                 CameraShake.Instance.FreezeTime(0.07f, 0.1f);
             }
 
-            m_CharaController.FreezeAnim(0.15f);
+            //m_CharaController.FreezeAnim(0.15f);
         }
     }
 }
