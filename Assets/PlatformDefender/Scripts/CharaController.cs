@@ -27,6 +27,8 @@ public class CharaController : MonoBehaviour
     [Header("HealthValues")]
     public float m_health;
     public float m_maxHealth;
+    public MenuController menuController;
+
     private bool m_isAlive = true;
 
     private bool m_canDetectGround = true;
@@ -43,6 +45,7 @@ public class CharaController : MonoBehaviour
     private Jump m_jump;
 
     private bool m_canMove = true;
+    private bool m_isInIframe = false;
 
     public Rigidbody2D Rb { get => m_rb; set => m_rb = value; }
     public bool IsGrounded { get => m_isGrounded; set => m_isGrounded = value; }
@@ -244,6 +247,30 @@ public class CharaController : MonoBehaviour
         m_anim.speed = 0;
         yield return new WaitForSeconds(duration);
         m_anim.speed = 1;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (m_isInIframe) return;
+
+        m_health -= damage;
+
+        if (m_health <= 0)
+        {
+            OnDeath();
+            menuController.gameOver();
+        }
+        else
+        {
+            StartCoroutine(C_IFrame());
+        }
+    }
+
+    private IEnumerator C_IFrame()
+    {
+        m_isInIframe = true;
+        yield return new WaitForSeconds(0.8f);
+        m_isInIframe = false;
     }
 
     public void OnDeath()
