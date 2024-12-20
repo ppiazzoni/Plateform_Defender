@@ -319,6 +319,10 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1454519407278848882, guid: 3ded6c1edec1bc24ba580e17c07fbeee, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2791327570332213808, guid: 3ded6c1edec1bc24ba580e17c07fbeee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -385,7 +389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5423723909840171660, guid: 3ded6c1edec1bc24ba580e17c07fbeee, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5423723909840171660, guid: 3ded6c1edec1bc24ba580e17c07fbeee, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
@@ -432,6 +436,11 @@ Transform:
 Canvas:
   m_CorrespondingSourceObject: {fileID: 6689012280134331673, guid: 5128d1171532b944ea122cdeba5a59fa, type: 3}
   m_PrefabInstance: {fileID: 6242986860695891730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1639609550 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8495542344506427126, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
+  m_PrefabInstance: {fileID: 1932595895}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1815609014 stripped
 MonoBehaviour:
@@ -674,7 +683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7239432693357144272, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 1
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8000557995837172373, guid: 9b00ac5a3a0317240a9fddaabb9ce1d1, type: 3}
       propertyPath: m_IsActive
@@ -800,7 +809,7 @@ PrefabInstance:
     - target: {fileID: 2520758194768846123, guid: bcd20e753f4d1824fa33fd56712272c0, type: 3}
       propertyPath: m_hitVFX
       value: 
-      objectReference: {fileID: 2978605167649093060, guid: 8657767fb97955c458336b443b2b9537, type: 3}
+      objectReference: {fileID: 1639609550}
     - target: {fileID: 2520758194768846123, guid: bcd20e753f4d1824fa33fd56712272c0, type: 3}
       propertyPath: m_knockbackForce
       value: 0
@@ -1013,13 +1022,13 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709732048}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 86f59543b2030674f9baef39772981f6, type: 3}
-  m_Resource: {fileID: 8300000, guid: 86f59543b2030674f9baef39772981f6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 40f4cce663a66e248be22ea123a65cd1, type: 3}
+  m_Resource: {fileID: 8300000, guid: 40f4cce663a66e248be22ea123a65cd1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.155
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1375,6 +1384,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1699747653094744354, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699747653094744354, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2709335156584903475, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -1463,6 +1480,22 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.5283019
       objectReference: {fileID: 0}
+    - target: {fileID: 5923752601353884935, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923752601353884935, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923752601353884935, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923752601353884935, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6462211696184750577, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.85
@@ -1471,6 +1504,14 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6820955698697324504, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820955698697324504, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 60639febbd8c49e44a1bb1499edff6c6, type: 3}
     - target: {fileID: 6820955698697324504, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -1488,13 +1529,25 @@ PrefabInstance:
       value: 0.5283019
       objectReference: {fileID: 0}
     - target: {fileID: 6820955698697324504, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
-      propertyPath: m_RenderingLayerMask
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6820955698697324504, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 6b8e865e1d897d24ab30fc636aa383da, type: 2}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820955698697324504, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820955698697324504, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820955698697324504, guid: ecb8c30980ab4e9478ee1dbd235438a6, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
