@@ -27,6 +27,7 @@ public class DamagePlayer : MonoBehaviour
                 player.Rb.AddForce(Vector2.up * m_burnKnockback, ForceMode2D.Impulse);
                 Debug.Log("oof");
             }
+
             else
             {
                 Debug.LogError("ha non");               

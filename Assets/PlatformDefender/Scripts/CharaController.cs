@@ -263,6 +263,7 @@ public class CharaController : MonoBehaviour
         else
         {
             StartCoroutine(C_IFrame());
+
         }
     }
 
