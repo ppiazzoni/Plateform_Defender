@@ -8,7 +8,7 @@ public class DamagePlayer : MonoBehaviour
     public CharaController targetScript;
     public float m_burnKnockback = 80;
     public float m_damage;
-
+    public ParticleSystem m_acidBurnVFX;
 
     void Awake()
     {
@@ -25,7 +25,7 @@ public class DamagePlayer : MonoBehaviour
                 player.TakeDamage(m_damage);
                 player.Rb.velocity = Vector2.zero;
                 player.Rb.AddForce(Vector2.up * m_burnKnockback, ForceMode2D.Impulse);
-                Debug.Log("oof");
+                m_acidBurnVFX.Play();
             }
 
             else
