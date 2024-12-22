@@ -1604,7 +1604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8578930034611093491, guid: c1429c737e72a174fadffec23cc20bb1, type: 3}
       propertyPath: m_ClearFlags
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8578930034611093491, guid: c1429c737e72a174fadffec23cc20bb1, type: 3}
       propertyPath: orthographic
@@ -1783,7 +1783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6682848455044130393, guid: 5128d1171532b944ea122cdeba5a59fa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 326
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 6689012280134331673, guid: 5128d1171532b944ea122cdeba5a59fa, type: 3}
       propertyPath: m_Camera
@@ -1831,7 +1831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8164898282807944936, guid: 5128d1171532b944ea122cdeba5a59fa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 333.00986
+      value: 407.00986
       objectReference: {fileID: 0}
     - target: {fileID: 9119205142565173792, guid: 5128d1171532b944ea122cdeba5a59fa, type: 3}
       propertyPath: m_Name
