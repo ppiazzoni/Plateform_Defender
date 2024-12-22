@@ -186,7 +186,7 @@ public class CharaController : MonoBehaviour
             {
                 m_jump.IsJumping = false;
                 m_anim.SetTrigger("Land");
-                CameraShake.Instance.StartShaking(1.2f, Vector2.up * 3, 0.07f, 0.05f);
+                CameraShake.Instance.StartShaking(1.2f, Vector2.up * 2, 0.07f, 0.05f);
                 if (m_landVFX)
                     m_landVFX.Play();
             }
@@ -260,8 +260,7 @@ public class CharaController : MonoBehaviour
         if (m_health <= 0)
         {
             StartCoroutine(DelayedDeath(1.0f));
-            menuController.gameOver();
-            
+            menuController.gameOver();            
         }
         else
         {
@@ -278,7 +277,7 @@ public class CharaController : MonoBehaviour
     private IEnumerator C_IFrame()
     {
         m_isInIframe = true;
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.3f);
         m_isInIframe = false;
     }
 

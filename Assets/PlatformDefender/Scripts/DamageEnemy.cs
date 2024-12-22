@@ -20,13 +20,12 @@ public class DamageEnemy : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-      //if (DamageTrigger.gameObject.CompareTag("Crab"))
-      {
+    {           
             EnemyController enemy = collision.GetComponentInParent<EnemyController>();
 
             if (enemy != null)
             {
+            CO
                 Vector2 dir = (enemy.transform.position - transform.position).normalized;
                 Vector2 knockback = dir + Vector2.up * 0.5f; // J'ajoute un boost vers le haut pour le knockback, peu importe la direction du coup
                 knockback *= m_knockbackForce;
@@ -43,9 +42,7 @@ public class DamageEnemy : MonoBehaviour
                 }
 
 
-            }
-      }
-        
+            }           
                 
     }
 }
