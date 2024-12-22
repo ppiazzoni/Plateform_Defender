@@ -259,20 +259,28 @@ public class CharaController : MonoBehaviour
 
         if (m_health <= 0)
         {
+            
             StartCoroutine(DelayedDeath(1.0f));
-            menuController.gameOver();            
         }
         else
         {
             StartCoroutine(C_IFrame());
         }
     }
-   
+
     private IEnumerator DelayedDeath(float delay)
     {
         yield return new WaitForSeconds(delay);
-        OnDeath();
+
+        if (m_deathVFX)
+        {
+            m_deathVFX.transform.parent = null;
+            m_deathVFX.Play();
+        }
+        OnDeath(); 
+        menuController.gameOver(); // Appel après la logique de mort
     }
+
 
     private IEnumerator C_IFrame()
     {

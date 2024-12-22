@@ -23,9 +23,9 @@ public class DamageEnemy : MonoBehaviour
     {           
             EnemyController enemy = collision.GetComponentInParent<EnemyController>();
 
-            if (enemy != null)
-            {
-            CO
+            if (enemy != null && enemy.gameObject.CompareTag("Crab"))
+            {   
+            
                 Vector2 dir = (enemy.transform.position - transform.position).normalized;
                 Vector2 knockback = dir + Vector2.up * 0.5f; // J'ajoute un boost vers le haut pour le knockback, peu importe la direction du coup
                 knockback *= m_knockbackForce;
@@ -38,7 +38,7 @@ public class DamageEnemy : MonoBehaviour
                     m_hitVFX.transform.position = enemy.transform.position;
                     m_hitVFX.transform.up = dir; // Le VFX est tourné en direction du coup. Pour que les particles qui partent en jet aillent bien dans la bonne direction
                     m_hitVFX.Play();
-                    CameraShake.Instance.FreezeTime(0.07f, 0.1f);
+                    //CameraShake.Instance.FreezeTime(0.07f, 0.1f);
                 }
 
 
