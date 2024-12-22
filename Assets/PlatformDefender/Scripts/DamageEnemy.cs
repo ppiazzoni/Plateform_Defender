@@ -10,6 +10,7 @@ public class DamageEnemy : MonoBehaviour
     [Header("VFX")]
     [SerializeField] private ParticleSystem m_hitVFX;
 
+
     private CharaController m_CharaController;
 
 

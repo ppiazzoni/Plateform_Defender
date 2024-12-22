@@ -259,11 +259,11 @@ public class CharaController : MonoBehaviour
         {
             OnDeath();
             menuController.gameOver();
+            
         }
         else
         {
             StartCoroutine(C_IFrame());
-
         }
     }
 
