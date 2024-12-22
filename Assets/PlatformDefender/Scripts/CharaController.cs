@@ -258,8 +258,7 @@ public class CharaController : MonoBehaviour
         m_health -= damage;
 
         if (m_health <= 0)
-        {
-            
+        {           
             StartCoroutine(DelayedDeath(1.0f));
         }
         else
