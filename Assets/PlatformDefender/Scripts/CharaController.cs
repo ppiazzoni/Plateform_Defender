@@ -18,6 +18,7 @@ public class CharaController : MonoBehaviour
     [SerializeField] private ParticleSystem m_landVFX;
     [SerializeField] private ParticleSystem m_deathVFX;
     [SerializeField] private Image m_healthBar;   
+ 
     
     [Header("Ground Detection")]
     [SerializeField] [Tooltip("Length of the ground-checking collider")] private float m_groundLength = 0.3f;
@@ -56,7 +57,7 @@ public class CharaController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {         
+    {
         m_health = m_maxHealth;
         m_rb = GetComponent<Rigidbody2D>();
         m_collider = GetComponentInChildren<Collider2D>();
@@ -82,6 +83,7 @@ public class CharaController : MonoBehaviour
         CheckForFallingState();
         HandleSpriteOrientation();
     }
+    
 
     private void FixedUpdate()
     {
@@ -257,7 +259,7 @@ public class CharaController : MonoBehaviour
 
         if (m_health <= 0)
         {
-            OnDeath();
+            StartCoroutine(DelayedDeath(1.0f));
             menuController.gameOver();
             
         }
@@ -265,6 +267,12 @@ public class CharaController : MonoBehaviour
         {
             StartCoroutine(C_IFrame());
         }
+    }
+   
+    private IEnumerator DelayedDeath(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        OnDeath();
     }
 
     private IEnumerator C_IFrame()

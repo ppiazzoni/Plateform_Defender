@@ -257,7 +257,7 @@ Transform:
   m_GameObject: {fileID: 4243459724128554202}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.878258, y: 7.3780394, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -281,9 +281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_health: 50
   m_weight: 0.7
-  m_useHitBlink: 1
+  m_useHitBlink: 0
   m_deathVFX: {fileID: 5587346819812304862}
-  Color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!50 &4243459724128554201
 Rigidbody2D:
   serializedVersion: 4
@@ -383,7 +382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4629256480289706603, guid: a5341d48462142144aa559f36c6670af, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.6264468
       objectReference: {fileID: 0}
     - target: {fileID: 4629256480289706603, guid: a5341d48462142144aa559f36c6670af, type: 3}
       propertyPath: m_LocalRotation.x
@@ -395,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4629256480289706603, guid: a5341d48462142144aa559f36c6670af, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.7794642
       objectReference: {fileID: 0}
     - target: {fileID: 4629256480289706603, guid: a5341d48462142144aa559f36c6670af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -410,7 +409,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8850471002902767546, guid: a5341d48462142144aa559f36c6670af, type: 3}
-      propertyPath: playOnAwake
+      propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -434,6 +433,10 @@ PrefabInstance:
     - target: {fileID: 611382043343796753, guid: ecd4e57e649898240a33029ec05e7981, type: 3}
       propertyPath: stopAction
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 611382043343796753, guid: ecd4e57e649898240a33029ec05e7981, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4360191444295441857, guid: ecd4e57e649898240a33029ec05e7981, type: 3}
       propertyPath: m_LocalPosition.x

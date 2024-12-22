@@ -25,7 +25,6 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(int damage, Vector2 knockback)
     {
         if (m_isDying) return;
-
         m_health -= damage;
 
         if (m_health < 0)
@@ -37,8 +36,9 @@ public class EnemyController : MonoBehaviour
         }
 
         Knockback(knockback);
-        if(m_useHitBlink)
-            StartCoroutine(ChangeAllSpritesOverrideColorCoroutine(Color.white, 0.1f));
+        if (m_useHitBlink)
+            Debug.Log("endive");
+            StartCoroutine(ChangeAllSpritesOverrideColorCoroutine(Color.red, 0.5f));
 
         StartCoroutine(IFrameCoroutine());
     }
