@@ -1773,6 +1773,10 @@ PrefabInstance:
       propertyPath: m_MatchWidthOrHeight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4890461920996068887, guid: 5128d1171532b944ea122cdeba5a59fa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4932175990729501427, guid: 5128d1171532b944ea122cdeba5a59fa, type: 3}
       propertyPath: m_IsActive
       value: 1
